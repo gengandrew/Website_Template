@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Devtool Interface</title>
+    <meta
+      name="description"
+      content="An Web interface for internal CSOC developed software"
+    />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Bootstrap CSS and Custom CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/stylesheet.css" />
+
+    <!-- Set href to an ico file to add a browser tab icon -->
+    <link
+      rel="shortcut icon"
+      href="images/badger.ico"
+      type="image/vnd.microsoft.icon"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      body {
+        font-family: "Lato", HelveticaNeue, "Helvetica Neue", Helvetica, Arial,
+          sans-serif;
+        font-size: 15px;
+        line-height: 1.8em;
+      }
+    </style>
+
+    <!-- External scripts -->
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"
+    ></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar html -->
+      <nav id="sidebar">
+        <div class="sidebar-header"><h3>Awesome Content</h3></div>
+        <ul class="list-unstyled components">
+          <p>Cool Sidebar</p>
+          <li class="active">
+            <a
+              href="#homeSubmenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dopdown-toggle"
+              >PlaceHolder</a
+            >
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+              <li><a href="#">Placeholder</a></li>
+              <li><a href="#">Placeholder</a></li>
+              <li><a href="#">Placeholder</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Placeholder</a></li>
+          <li>
+            <a
+              href="#pageSubmenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              >PlaceHolder</a
+            >
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Something 1</a></li>
+          <li><a href="#">Something 2</a></li>
+        </ul>
+      </nav>
+      <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <ul class="nav navbar-nav ml-auto">
+              <li style="display: inline">
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                  <span></span> <span></span> <span></span>
+                </button>
+              </li>
+
+              <li class="nav-item active">
+                <a class="index-title" href="#">Devtool Interface</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Page</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Page</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Page</a></li>
+              <li class="nav-item">
+                <form class="form-inline my-2 my-lg-0" style="margin-top: 8px">
+                  <input
+                    class="form-control mr-sm-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button
+                    class="btn btn-outline-success my-2 my-sm-0"
+                    type="submit"
+                  >
+                    Search
+                  </button>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <button><a href="https://www.google.com">Button</a></button>
+      </div>
+    </div>
+
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Popper.JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+      integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+      integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#sidebarCollapse").on("click", function() {
+          $("#sidebar").toggleClass("active");
+          $(this).toggleClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
